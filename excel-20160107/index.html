@@ -321,7 +321,7 @@
 
 						`VLOOKUP(lookup value, table array, col index num, [range lookup])`
 
-						Let's break this down some: 
+						Let's break this vertical lookup down: 
 						1. lookup value - the value you would like to look up (has to be the first column set in the table array). 
 						2. table array - range of cells you want to search. 
 						3. col index number - the column number with your return value 
@@ -341,6 +341,26 @@
 					</section> 
 					<section data-markdown>
 						###HLOOKUP
+
+						`HLOOKUP(lookup value, table array, col index num, [range lookup])`
+
+						Let's break this horizontal lookup down: 
+						1. lookup value - the value you would like to look up (has to be the first column set in the table array). 
+						2. table array - range of cells you want to search. 
+						3. col index number - the column number with your return value 
+						4. range lookup - TRUE or FALSE - determines if you want an exact or not
+					</section> 
+					<section data-markdown>
+						###HLOOKUP Example 
+
+						`=HLOOKUP(A1,A1:C3,2,FALSE)`
+
+						   | A | B | C | D |
+						---|---|---|---|---|
+						1  |Tom|Al |Jil| ?
+						2  |33 |201|938| ?
+						3  |35 |765|832| ?
+
 					</section> 
 				</section>
 				<section>
