@@ -5,4 +5,3 @@ This presentation was given at the [Storytelling with Data workshop at Boston Un
 ## The files 
 
  - index.html -> presentation slides (linked to revealjs css, js, lib and plugins)
- - 
