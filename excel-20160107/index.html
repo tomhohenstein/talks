@@ -517,12 +517,25 @@
 						1  |1/10/15 1:45:52 AM|=TIME(HOUR(A1), MINUTE(A1), SECOND(A1)) returns .07351852
 					</section> 
 				</section>
+				<!--
 				<section>
 					<section data-markdown>
 						##RANKS AND ROUND
 					</section> 
 					<section data-markdown>
 						###RANK
+
+						```RANK(number, reference, order)```
+
+						Rank provides the rank of the number you provide within the range of cells listed in your reference. If order is 0 largest values are ranked first, if 1 the smallest values are ranked first.
+
+						Example `RANK(A1, A1:A3, 1)`
+
+						   | A | B 
+						---|---|---
+						1  | 2 | =RANK(A1, A1:A3, 1) returns 1
+						2  | 3 | =RANK(A1, A1:A3, 0) returns 3
+						3  | 4 | 
 					</section> 
 					<section data-markdown>
 						###PERCENTRANK
@@ -531,6 +544,7 @@
 						###ROUND
 					</section> 
 				</section>
+			--> 
 				<section>
 					<section data-markdown>
 						##A FEW TRICKS 
@@ -562,7 +576,7 @@
 					<section data-markdown>
 						### #NAME?
 
-						Your formula is referring to a name that Excel doesn't understand. Good chance you have a typo in your workbook
+						Your formula is referring to a name that Excel doesn't understand. Good chance you have a typo in your workbook.
 					</section> 
 					<section data-markdown>
 						### #NUM!
