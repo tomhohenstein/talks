@@ -508,7 +508,7 @@
 						###TIME
 						```TIME(hour, minute, second)```
 
-						Returns the decimal number for the given time, ranging from 0 to .99988426 (assuming cell was formatted as general). 
+						Returns the decimal number for the given time, ranging from 0 to .99988426 (assuming cell was formatted as general)g. 
 
 						Example: `TIME(HOUR(A1), MINUTE(A1), SECOND(A1))`
 
@@ -550,19 +550,34 @@
 						##Errors
 					</section> 
 					<section data-markdown>
+						### #DIV/0! 
+
+						You're formula is probably trying to divide by zero 
+					</section> 
+					<section data-markdown>
 						### #N/A
+
+						The formula you're using was not able to produce a valid response, data is missing, or required arguments are missing. 
 					</section> 
 					<section data-markdown>
 						### #NAME?
+
+						Your formula is referring to a name that Excel doesn't understand. Good chance you have a typo in your workbook
 					</section> 
 					<section data-markdown>
 						### #NUM!
+
+						Your formula contains numeric values that Excel doesn't understand. 
 					</section> 
 					<section data-markdown>
 						### #REF!
+
+						Your formula contains an invalid reference to a cell (or other data).
 					</section> 
 					<section data-markdown>
 						### #VALUE!
+
+						Your formula is having issues with the data types you're using. Often caused by having text, or other restricted characters, in math formulas. 
 					</section> 
 				</section>
 				<section data-markdown>
