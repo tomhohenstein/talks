@@ -43,9 +43,41 @@
 					### Advancing with Spreadsheets 
 					
 					Taking your Data-Analysis Further
-					with String Functions and Pivot Tables 
 
 					Tom Hohenstein
+				</section>
+				<section>
+					<section data-markdown>
+						## Layout and Resources 
+					</section> 
+					<section data-markdown>
+						## Layout 
+
+						This presentation is designed to work with the Excel workbook. When you open the workbook you'll notice the tabs match, well almost match, the main topics. Feel free to listen and workaround in the spreadsheet. 
+					</section> 
+					<section data-markdown>
+						## Resources 
+
+						The sites and resources I use when I'm working. 
+
+						1. Excel help and function builder
+						2. Google - searches like 'Excel "formula name" example'
+						3. Office Support for Excel 
+						4. People 
+
+					</section>
+					<section data-markdown>
+						## Note of Thanks  
+
+						This presentation and workbook is built upon, and uses examples from, Mary Jo Webster's March 2015 "Excel Magic" presentation. 
+
+						Her contact information is: 
+						
+						@MARYJOWEBSTER 
+						
+						MJWEBSTER71@GMAIL.COM
+
+					</section> 
 				</section>
 				<section>
 					<section data-markdown>
@@ -89,7 +121,7 @@
 						   | A | B |
 						---|---|---|
 						1  |Tom|=MID(A1,2,1) returns "o"
-						2  |Bob|=RIGHT(A2,2,2) returns "ob"
+						2  |Bob|=MID(A2,2,2) returns "ob"
 					</section> 
 					<section data-markdown>
 						###SEARCH
@@ -145,7 +177,7 @@
 						LEN + LEFT (or RIGHT) can be used to grab parts of a text string. For example city and state information within the same cell. 
 
 						Example `=LEFT(A1,LEN(A1)-3)`
-						
+
 						   | A | B |
 						---|---|---|
 						1  |St. Paul MN|=LEFT(A1,LEN(A1)-3) returns St. Paul
@@ -272,7 +304,7 @@
 					<section data-markdown>
 						### Nested Example 
 
-						`IF(A1>59, IF(A1>89, "A", IF(A1>79, "B", IF(A1>65, "C", "D"))),"Failed"`
+						`IF(A1>59, IF(A1>89, "A", IF(A1>79, "B", IF(A1>65, "C", "D"))),"Failed")`
 
 						   | A | B |
 						---|---|---|
