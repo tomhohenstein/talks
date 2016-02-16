@@ -1,5 +1,0 @@
-LICENSE
-README.md
-excel-20160107
-revealjs
-text.txt
