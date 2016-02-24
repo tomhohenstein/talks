@@ -52,6 +52,16 @@
 					<section data-markdown>
 						## Outline 
 
+						+ What is Jekyll? 
+						+ Getting Started with Jekyll 
+						+ Running Jekyll 
+						+ Basic Blog Structure 
+						+ Writing a Post 
+						+ Notes on Markdown 
+						+ Variables 
+						+ Notes on Liquid 
+						+ Building a Template 
+
 
 					</section> 
 					<section data-markdown>
@@ -114,7 +124,7 @@
 					<section data-markdown>
 						### 2) Jekyll is also
 
-						+ written in Ruby 
+						+ written in Ruby (installed as a gem locally)
 						+ free and open sources
 						+ supported by GitHub
 
@@ -123,20 +133,79 @@
 					<section data-markdown>
 						### 3) Jekyll's Background
 						
+						Written by [Tom Preston-Werner](https://en.wikipedia.org/wiki/Tom_Preston-Werner) in 2008. While Jekyll is used to create websites and static blogs, it's actually more of a parsing engine. You provide Jekyll the content, it outputs a static website (no database required).
+
 					</section>
 				</section>
 				<section>
 					<section data-markdown>
-						## Installing Jekyll (Mac and Linux) 
+						## Getting Started with Jekyll (Mac and Linux) 
 					</section>
 					<section data-markdown>
-						### 1) 
+						### 1) Install Ruby 
+
+
+						Run ``` ruby --version``` anything above 2.0 is good. 
+
+						No Ruby? Check out the [Ruby documentation](https://www.ruby-lang.org/en/downloads/)
+
+					</section>
+					<section data-markdown>
+						### 2) Install RubyGems
+
+						RubyGems is a package manager for Ruby. [Download it and install it](https://rubygems.org/pages/download).
+
+						Run ```gem -v``` to make sure you have it.  
+
 					</section> 
 					<section data-markdown>
-						### 2)
+						### 3) Optional - Install Bundler 
+
+						This is not required but highly recommended by GitHub. Bundler assists with tracking gems and versions. Run ```gem install bundler```
 					</section> 
 					<section data-markdown>
-						### 3)
+						### 4) Create a Gemfile
+
+						In your repository create a ```Gemfile``` ([example](https://github.com/bulib/studyGroup/blob/gh-pages/Gemfile))
+
+						Your Gemfile should read 
+
+						```
+						source 'https://rubygems.org'
+						gem 'github-pages' 
+						```
+
+					</section> 
+					<section data-markdown>
+						### 5) Install GitHub Pages Gem 
+
+						```bundle exec jekyll build --safe```
+					</section>
+					<section data-markdown>
+						### 6) Running your site locally
+
+						My method ``` bundle exec jekyll serve ```
+
+
+						GitHub's [new method](https://help.github.com/articles/setting-up-your-pages-site-locally-with-jekyll/) (I can't get this to work)
+						```
+						bundle exec jekyll build --safe 
+						jekyll serve
+						```
+					</section> 
+					<section data-markdown>
+						### 7) Updating 
+
+						``` gem update jekyll ```
+					</section> 
+					<section data-markdown>
+						### 8) A few other tips  
+
+						Use ``` gem update ``` to update all gems 
+
+						Use ``` gem clenup ``` to clean up your gems 
+
+						Use ``` gem install kramdown``` to install kramdown 
 					</section> 
 				</section>
 				<section>
@@ -146,15 +215,14 @@
 					<section data-markdown>
 						### 1) Good Luck! 
 		
+						I don't have a Windows machine so... 
 					</section>  
 					<section data-markdown>
-						### 2) 
-		
-					</section> 
-					<section data-markdown>
-						### 3) 
+						### 2) Follow the instructions at
 
-					</section>					
+						[Run Jekyll on Windows](http://jekyll-windows.juthilo.com/)
+		
+					</section> 				
 				</section>
 				<section>
 					<section data-markdown>
@@ -164,21 +232,98 @@
 					<section data-markdown>
 						### Basic Commands (GitHub version)  
 
+						Serve local website: ```bundle exec jekyll serve```
+						Build website: ```bundle exec jekyll build```
+
 					</section> 
 					<section data-markdown>
 						### Basic Commands (Jekyll version)
+
+						Build website: ```jekyll build```
+
+						Watch for changes: ```jekyll build --watch```
+
+						Serve website and watch: ```jekyll serve```
+
+						Serve without watching: ```jekyll serve --detach```
 					</section> 
 					<section data-markdown>
 						### List of Commands 
+
+						Can be [found in Jekyll's documentation](http://jekyllrb.com/docs/usage/). 
 					</section> 
 				</section>
 				<section>
 					<section data-markdown>
 						## Basic Blog Structure    
-		
+			
+						See the [official documentation](http://jekyllrb.com/docs/structure/) for more detailed information. Below is a summary. 
+
+					</section> 
+					<section data-markdown>
+						### _config.yml
+
+						This file has your configuration information. See [documentation](http://jekyllrb.com/docs/configuration/) for more information.   
+
+					</section> 
+					<section data-markdown>
+						### _drafts 
+
+						A folder for unpublished content. These files should be labeled without a date. 
+
+					</section> 
+					<section data-markdown>
+						### _includes   
+
+						A folder for "partials" that can be added to pages. Examples are header.html or footer.html. 
+
+						Syntax for including files is: 
+
+						``` {% include file.ext %} ```
+
+					</section> 
+					<section data-markdown>
+						### _layouts
+
+						These are your templates for laying out posts (selected in the YAML front matter). 
+
+						Use ```{{ content }}``` as a placeholder for post content   
+
 					</section> 
 					<section data-markdown>
 						### _posts   
+
+						This is your content. The naming convention is ```YEAR-MONTH-DAY-title.markup```. You can customize the permalink for each post but the date and markup are determined by the file name. 
+
+					</section> 
+					<section data-markdown>
+						### _data   
+
+						This folder is for your site data. Files should be ```.yml```, ```.yaml```, ```.json```, or ```.csv```. Data is accessible via ```site.data```. 
+
+					</section> 
+					<section data-markdown>
+						### _site  
+
+						This is where your site will be! 
+
+					</section> 
+					<section data-markdown>
+						### .jekyll-metadata
+
+						A metadata file Jekyll uses to track which files have been updated since the last build. 
+
+					</section> 
+					<section data-markdown>
+						### _index.html  
+
+						If it has YAML Front Matter it will be transformed by Jekyll. This is also true for any ```.html```, ```.markdown```, ```.md```, or ```.textfile```. 
+
+					</section> 
+					<section data-markdown>
+						### Other files   
+
+						Everything else like ```css``` and ```images``` will be copied over to your site. 
 
 					</section> 
 				</section>
@@ -188,13 +333,41 @@
 		
 					</section> 
 					<section data-markdown>
-						### Header   
+						### Front Matter   
 
-					</section> 
+						Front matter gives Jekyll a lot of power and flexibility. However, the syntax is pretty easy. 
+
+						```
+						---
+						layout: post
+						title: Awesome
+						---
+						```
+
+
+					</section>
+					<section data-markdown>
+						### Example Post  
+
+						```
+						---
+						layout: post
+						title: Awesome
+						---
+
+						Start adding content. 
+						You can probably skip adding title information 
+						because most layouts will have something 
+						like {{ page.title }} in the layout
+
+						```
+					</section>  
 				</section>
 				<section>
 					<section data-markdown>
-						## Notes on Markdown     
+						## Notes on Markdown   
+
+						Not completed yet  
 		
 					</section> 
 					<section data-markdown>
@@ -205,10 +378,59 @@
 				<section>
 					<section data-markdown>
 						## Variables      
+
+						In Jekyll there are 3 types of general variables: global, site, and page. 
+
+						These variables can be accessed using 
+
+						```{{ page.VAR }}```
 		
 					</section> 
 					<section data-markdown>
+						### Predefined Global Variables   
+
+						```layout``` if set uses the layout file name without the extension
+
+						```permalink``` use this to set your the final post url (assuming you don't like the /year/month/day/title.html default)
+
+						```published``` set to false if you don't want a post to show up
+
+					</section> 
+					<section data-markdown>
+						### Predefined Global Variables  
+
+						```category``` set in the post's front matter (use a comma separated or YAML list). 
+
+						```tags``` similar to category (set in same manner and added to front matter) but represents a tag. 
+
+					</section> 
+					<section data-markdown>
 						### Site Variables   
+
+						For the [complete list see the documentation](http://jekyllrb.com/docs/variables/). I'll cover a few here. 
+
+						```site.pages``` list of all pages
+
+					</section> 
+					<section data-markdown>
+						### Site Variables    
+
+						```site.posts``` list of all posts 
+
+						```site.categories.category``` list of all posts in a category
+
+						```site.tags.tag``` list of all posts with a tag
+					</section> 
+					<section data-markdown>
+						### Page Variables   
+
+						For the [complete list see the documentation](http://jekyllrb.com/docs/variables/). I'll cover a few here. 
+
+						```page.title``` page's title
+
+						```page.tag``` page's tags
+
+						```page.category``` page's category. 
 
 					</section> 
 				</section>
