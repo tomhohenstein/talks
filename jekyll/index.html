@@ -14,11 +14,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
 		<link rel="stylesheet" href="../revealjs/css/reveal.css">
+
 		<link rel="stylesheet" href="../revealjs/css/theme/bu-library.css" id="theme">
-
-		<!-- Code syntax highlighting -->
-		<link rel="stylesheet" href="../revealjs/lib/css/zenburn.css">
-
 		<!-- Printing and PDF exports -->
 		<script>
 			var link = document.createElement( 'link' );
@@ -442,7 +439,48 @@
 					<section data-markdown>
 						### What is Liquid   
 
+						[Liquid is an open source](https://docs.shopify.com/themes/liquid) template engine that's written in Ruby and was developed by Shopify. 
+
 					</section> 
+					<section data-markdown>
+						### Syntax - Basic
+
+						Liquid has some fun syntax and uses ```{{ }}``` and ```{% %}``` for tags and objects. See the [documentation for complete examples](https://docs.shopify.com/themes/liquid/basics). 
+
+					</section> 
+					<section data-markdown>
+						### Syntax Example - If Statement 
+
+						```
+						{% if post.title == 'example' %}
+							An example
+						{% endif %}
+						```
+					</section> 
+					<section data-markdown>
+						### Syntax Example - Variables 
+
+						``` {{ post.title }} ``` prints the post's title 
+					</section>
+					<section data-markdown>
+						### Syntax Example - For Loop 
+
+						```
+						{% for post in site.posts %}
+							{{ post.title }}
+						{% endfor %}
+						```
+					</section>
+					<section data-markdown>
+						### True and False
+
+						```{% if var == true %}``` will always be true if var is assigned 
+
+						Empty strings are true (check to see if they are blank)
+
+						[Read the docs](https://docs.shopify.com/themes/liquid/basics/true-and-false) for more information
+
+					</section>
 				</section>
 				<section>
 					<section data-markdown>

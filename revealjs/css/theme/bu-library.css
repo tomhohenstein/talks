@@ -177,6 +177,9 @@ body {
   max-height: 400px;
   word-wrap: normal; }
 
+.django .hljs-template_tag, 
+.django .hljs-variable, 
+.django .hljs-filter .hljs-argument,
 .reveal pre * {
   color: #222;
   font-size: 1.3em; 
