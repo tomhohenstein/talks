@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<title>Jekyll & GitHub - Basic, very basic</title>
+
+		<meta name="description" content="The basics of Jekyll and GitHub Pages">
+		<meta name="author" content="Tom Hohenstein">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="../revealjs/css/reveal.css">
+		<link rel="stylesheet" href="../revealjs/css/theme/bu-library.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="../revealjs/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../revealjs/css/print/pdf.css' : '../revealjs/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section data-markdown>
+					## Jekyll & GitHub Pages
+					
+					Building a Basic Website  
+
+					Tom Hohenstein
+				</section>
+				<section>
+					<section data-markdown>
+						## Outline & Resources 
+					</section> 
+					<section data-markdown>
+						## Outline 
+
+						This presentation is designed to help you get started using GitHub Pages and Jekyll to build a simple website for showcasing your work. 
+
+						Here's what we are going to cover: 
+
+						+ What is Jekyll?
+						+ What are GitHub Pages?
+						+ How to get stated 
+						+ What is going on? 
+
+					</section> 
+					<section data-markdown>
+						## Resources 
+
+						Below are some handy resources: 
+
+						+ [GitHub Pages](https://pages.github.com/)
+						+ [Jekyll](http://jekyllrb.com/)
+						+ Template: [Hyde](http://hyde.getpoole.com/)
+						+ Template: [Freelancer](http://jeromelachaud.github.io/freelancer-theme/)
+						+ Template: [Emerald](http://www.jacoporabolini.com/emerald/#)
+						+ Template: [Willian Justen](http://willianjusten.com.br/will-jekyll-template/)
+						+ [Jekyll Themes](http://jekyllthemes.org/)
+						+ [Jekyll Themes.io](http://jekyllthemes.io/)
+						+ [List of Jekyll Themes](https://github.com/jekyll/jekyll/wiki/Themes)
+
+					</section>
+				</section>
+				<section>
+					<section data-markdown>
+						##What is Jekyll? 
+					</section> 
+					<section data-markdown>
+						### 1) A Static Blog Generator 
+
+						
+					</section>
+					<section data-markdown>
+						### 2) A markdown and liquid tag converter 
+
+						
+					</section>
+					<section data-markdown>
+						### 3) The software behind GitHub pages  
+
+						
+					</section>
+				</section>
+				<section>
+					<section data-markdown>
+						## What are GitHub Pages? 
+					</section>
+					<section data-markdown>
+						### 1) Websites 
+					</section> 
+					<section data-markdown>
+						### 2) Hosted on GitHub 
+					</section> 
+					<section data-markdown>
+						### 3) Free
+					</section> 
+					 
+				</section>
+				<section>
+					<section data-markdown>
+						## How to get started 
+					</section>
+					<section data-markdown>
+						### 1) Create GitHub Account 
+
+						+ Go to [GitHub](https://github.com/) and create an account. 
+						+ If you have additional questions, [check out GitHub's Help page on setting up](https://help.github.com/articles/signing-up-for-a-new-github-account/). 
+		
+					</section>  
+					<section data-markdown>
+						### 2) Fork a Jekyll Template  
+
+						+ [Fork](https://help.github.com/articles/fork-a-repo/) Joel Glovier's [resume template](https://github.com/jglovier/resume-template)
+						+ More Jekyll themes are at: 
+							+ [Jekyll Themes](http://jekyllthemes.org/)
+							+ [JekyllThemes.io](http://jekyllthemes.io/)
+		
+					</section> 
+					<section data-markdown>
+						### 3) [Rename](https://help.github.com/articles/renaming-a-repository/) your repo to username.github.io  
+
+						
+		
+					</section>
+					<section data-markdown>
+						### 4) Create a [master branch](https://help.github.com/articles/creating-and-deleting-branches-within-your-repository/)
+
+						This should trigger GitHub to create a website at http://username.github.io (check in the settings first)
+		
+					</section>
+					<section data-markdown>
+						### Who's lost?   
+
+						Pause to catch everyone up. Things to check: 
+						+ Your repo has a master branch 
+						+ Your repository is named username.github.io
+						+ You've waited a few minutes for GitHub to work its magic 
+		
+		
+					</section>
+					<section data-markdown>
+						### 5) Start [editing](https://help.github.com/articles/editing-files-in-your-repository/)
+
+						+ In the folder _layouts edit resume.html 
+		
+					</section> 
+					<section data-markdown>
+						### 6) Commit your changes    
+
+						+ Commit your changes to ensure they are saved to your repo.  
+		
+					</section> 
+					<section data-markdown>
+						### 7) Check your edits    
+
+ 						Visit http://username.github.io (it might take a few seconds)
+		
+					</section> 
+				</section>
+				<section>
+					<section data-markdown>
+						## What is going on?     
+		
+					</section> 
+					<section data-markdown>
+						### Jekyll is     
+		
+						+ Rebuilding your website (well, webpage)
+						+ GitHub is serving it 
+
+
+					</section> 
+					<section data-markdown>
+						### Notes on syntax  
+		
+						+ ```{% %}``` [Liquid tags](http://jekyllrb.com/docs/templates/) 
+						+ ``` {{ }}``` More [Liquid](http://jekyllrb.com/docs/templates/)
+						+ The rest is HTML
+
+					</section>
+					<section data-markdown>
+						### Next 
+
+						Learn HTML and CSS to customize your site! 
+					</section> 
+				</section>
+				
+				<section data-markdown>
+					Thank you!
+
+					tah@bu.edu
+				</section> 
+			</div>
+
+		</div>
+
+		<script src="../revealjs/lib/js/head.min.js"></script>
+		<script src="../revealjs/js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: '../revealjs/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../revealjs/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../revealjs/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../revealjs/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../revealjs/plugin/zoom-js/zoom.js', async: true },
+					{ src: '../revealjs/plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
