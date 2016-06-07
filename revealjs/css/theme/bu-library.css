@@ -16,7 +16,7 @@ body:after {
   content: url(../../lib/img/bu-library-logo.svg);
   position: fixed;
   bottom: 3.5em;
-  left: 3.5em; }
+  left: 3.5em; } 
 
 code,
 .reveal code, 
