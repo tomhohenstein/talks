@@ -46,7 +46,7 @@ It is about the people in the story.
 
 ## People 
 
-It is about the people reading the story
+It is about the people reading the story.
 
 ## 6 Essentials 
 
